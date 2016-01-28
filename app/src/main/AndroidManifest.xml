@@ -11,8 +11,14 @@
         <activity android:name=".NerdLauncherActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- use NerdLauncher as a replacement for the Home screen (via the Home button).
+                 if NerdLauncher is made the permanent Home screen, then to disable it, do: go to
+                 Settings - Applications - Default Applications - Home, press CLEAR button next to
+                 NerdLauncher from the app list. the default permanent Home app is TouchWiz home on
+                 the Samsung tablet -->
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
